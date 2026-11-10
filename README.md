@@ -7,7 +7,7 @@ No build step, no server, no dependencies — just open `index.html`.
 ## Features
 
 - **All four camo modes** — Co-op & Endgame (Campaign), Multiplayer, Zombies and Warzone, each with its own camo names and challenges.
-- **Every weapon category** — Assault Rifles, SMGs, Shotguns, LMGs, Marksman Rifles, Sniper Rifles, Pistols, Launchers, Specials and Melee.
+- **64 weapons across 10 categories** — Assault Rifles, SMGs, Shotguns, LMGs, Marksman Rifles, Sniper Rifles, Pistols, Launchers, Specials and Melee (full list [below](#weapons-included)).
 - **Challenge text inline** — each camo shows exactly what you need to do to unlock it.
 - **Progress colors on weapons** — a gun's name in the sidebar changes color as you complete camos *in order*:
 
@@ -46,6 +46,28 @@ python -m http.server
 - Click **Reset** in the top right to wipe all progress (you'll be asked to confirm).
 
 > Progress is stored per browser. Clearing site data, switching browsers or using a private window will start you fresh.
+
+## Weapons included
+
+| Category | Count | Weapons |
+| --- | :-: | --- |
+| Assault Rifles | 14 | M15 MOD O, AK-27, MXR-17, X9 MAVERICK, DS20 MIRAGE, PEACEKEEPER MK1, MADDOX RFB, EGRT-17, VOYAK KT-3, MK35 ISR, VX COMPACT, AN-94, FG42, TR51 PARA |
+| SMGs | 13 | RYDEN 45K, RK-9, RAZOR 9MM, DRAVEC 45, CARBON 57, MPC-25, KOGOT-7, STURMWOLF 45, REV-46, VST, CBRS-3, GREMLIN, VMP |
+| Shotguns | 4 | M10 BREACHER, ECHO 12, AKITA, SG-12 |
+| LMGs | 4 | MK.78, XM325, SOKOL 545, MAMMOTH |
+| Marksman Rifles | 5 | M8A1, WARDEN 308, M34 NOVALINE, SWORDFISH A1, KRS-7.62 |
+| Sniper Rifles | 5 | VS RECON, SHADOW SK, XR-3 ION, HAWKER HX, STRIDER 300 |
+| Pistols | 4 | JÄGER 45, VELOX 5.7, CODA 9, 1911 |
+| Launchers | 2 | AAROW 109, A.R.C. M1 |
+| Specials | 5 | NX RAVAGER, GDL HAVOC, SIREN, GRIMHAWK, ROC 20MM |
+| Melee | 8 | KNIFE, FLATLINE MK.II, BALLISTIC KNIFE, H311-SAW, KATANA, EXECUTIONER'S DUET, MACE, ARCBLADE |
+
+### What's new in this version
+
+- **4 new weapons:** TR51 PARA (Assault Rifle), VMP (SMG), ROC 20MM (Special) and ARCBLADE (Melee), each with camos and challenges for all four modes.
+- **New challenges** to support them: *Get 300 armored zombie eliminations*, *With the tactical laser equipped: Kill 15 zombies without reloading 30 times* (Zombies) and *Get 250 kills* (Co-op & Endgame).
+
+Existing progress is unaffected — the new weapons simply start at 0/8.
 
 ## Project structure
 
