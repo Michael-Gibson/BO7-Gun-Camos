@@ -83,6 +83,7 @@ const CHALLENGES = Object.freeze({
     // Zombies
     Z: Object.freeze({
         ARMORED_75: 'Get 75 armored zombie eliminations',
+        ARMORED_300: 'Get 300 armored zombie eliminations',
         ARMOR_T2_150: 'With tier 2 or higher armor equipped: get 150 eliminations',
         BRAIN_ROT_300: 'With brain rot ammo mod equipped: get 300 eliminations',
         CRITICALS_1000: 'Get 1000 critical kills',
@@ -116,6 +117,7 @@ const CHALLENGES = Object.freeze({
         SINGLE_MATCH_500: 'Get 500 eliminations in a single match',
         SINGLE_MATCH_CRITS_300: 'Get 300 critical kills in a single match',
         TACTICAL_100: 'Kill 100 enemies affected by your tactical equipment',
+        TACTICAL_LASER_30: 'With the tactical laser equipped: Kill 15 zombies without reloading 30 times',
         TEDD_TASK_25X15: 'Get 25 kills during a single T.E.D.D. Task 15 times',
         TWO_CRITS_ONE_SHOT_15: 'Get 2 critical kills with a single shot 15 times',
         UNLOCK_DOOMSTEEL_30: 'Unlock Doomsteel Camo on 30 weapons',
@@ -132,6 +134,7 @@ const CHALLENGES = Object.freeze({
         DESTROY_GUILD_EQUIPMENT_25: 'Destroy 25 guild D.A.W.G.s, sentry turrets, or drones',
         DIRECT_HITS_25: 'Get 25 kills with a direct hit',
         ELITE_ENEMIES_10: 'Eliminate 10 elite enemies',
+        ELIMINATIONS_250: 'Get 250 kills',
         ENDGAME_GUILD_CHECKPOINTS_50: 'In Endgame: Eliminate 50 enemies in Guild Checkpoints',
         ENDGAME_HVTS_10: 'In Endgame: Eliminate 10 HVTs or prime targets',
         ENDGAME_HVTS_15: 'In Endgame: Eliminate 15 HVTs or prime targets',
@@ -752,6 +755,48 @@ const weapons = {
                     { name: "ABSOLUTE ZERO", challenge: CHALLENGES.W.TOP_10_ELIMS_10 },
                     { name: "APOCALYPSE", challenge: CHALLENGES.W.UNLOCK_ABSOLUTE_ZERO_30 }
                 ]
+        },
+        "TR51 PARA": {
+            campaign: [
+                    { name: "TOPAZ SNAKE", challenge: CHALLENGES.C.EXTENDED_MAG_100 },
+                    { name: "CINDER", challenge: CHALLENGES.C.SLIDE_DIVE_WALLJUMP_25 },
+                    { name: "CAIMAN", challenge: CHALLENGES.C.FEAR_100 },
+                    { name: "NETWORK", challenge: CHALLENGES.C.RELOAD_10X10 },
+                    { name: "MOTEN GOLD", challenge: CHALLENGES.C.SPECIAL_ENEMIES_20 },
+                    { name: "MOONSTONE", challenge: CHALLENGES.C.ENDGAME_ZONE_III_IV_100 },
+                    { name: "CHROMA FLUX", challenge: CHALLENGES.C.ELITE_ENEMIES_10 },
+                    { name: "GENESIS", challenge: CHALLENGES.C.UNLOCK_CHROMA_FLUX_30 }
+                ],
+            multiplayer: [
+                    { name: "RUBY SNAKE", challenge: CHALLENGES.MP.HEADSHOTS_80 },
+                    { name: "DIAMONDBACK", challenge: CHALLENGES.MP.SUPPRESSOR_50 },
+                    { name: "RAPTOR", challenge: CHALLENGES.MP.NO_ATTACHMENTS_50 },
+                    { name: "MAINFRAME", challenge: CHALLENGES.MP.GUNFIGHTER_50 },
+                    { name: "SHATTERED GOLD", challenge: CHALLENGES.MP.THREE_KILLS_NO_DYING_10 },
+                    { name: "ARCLIGHT", challenge: CHALLENGES.MP.DOUBLE_KILLS_10 },
+                    { name: "TEMPEST", challenge: CHALLENGES.MP.FIVE_KILLS_NO_DYING_3 },
+                    { name: "SINGULARITY", challenge: CHALLENGES.MP.UNLOCK_TEMPEST_30 }
+                ],
+            zombies: [
+                    { name: "EMERALD SNAKE", challenge: CHALLENGES.Z.CRITICALS_1000 },
+                    { name: "MUTILATE", challenge: CHALLENGES.Z.HIPFIRE_300 },
+                    { name: "SLITHER", challenge: CHALLENGES.Z.TACTICAL_100 },
+                    { name: "PATHFINDER", challenge: CHALLENGES.Z.DEAD_WIRE_300 },
+                    { name: "GOLDEN DRAGON", challenge: CHALLENGES.Z.RAPID_KILLS_10X15 },
+                    { name: "BLOODSTONE", challenge: CHALLENGES.Z.NO_DAMAGE_STREAK_20X5 },
+                    { name: "DOOMSTEEL", challenge: CHALLENGES.Z.ELITE_ZOMBIES_10 },
+                    { name: "INFESTATION", challenge: CHALLENGES.Z.UNLOCK_DOOMSTEEL_30 }
+                ],
+            warzone: [
+                    { name: "SAPPHIRE SNAKE", challenge: CHALLENGES.W.ELIMINATIONS_100 },
+                    { name: "SHIMMER", challenge: CHALLENGES.W.HEADSHOT_5 },
+                    { name: "TYRANT", challenge: CHALLENGES.W.MOVING_5 },
+                    { name: "TRACE", challenge: CHALLENGES.W.SUPPRESSOR_5 },
+                    { name: "GOLDEN DAMASCUS", challenge: CHALLENGES.W.THREE_KILLS_SINGLE_MATCH_5 },
+                    { name: "STARGLASS", challenge: CHALLENGES.W.FIVE_KILLS_NO_DYING_5 },
+                    { name: "ABSOLUTE ZERO", challenge: CHALLENGES.W.TOP_10_ELIMS_10 },
+                    { name: "APOCALYPSE", challenge: CHALLENGES.W.UNLOCK_ABSOLUTE_ZERO_30 }
+                ]
         }
     },
     "SMGS": {
@@ -1253,6 +1298,48 @@ const weapons = {
                     { name: "SHIMMER", challenge: CHALLENGES.W.MOVING_5 },
                     { name: "TYRANT", challenge: CHALLENGES.W.SPRINT_5 },
                     { name: "TRACE", challenge: CHALLENGES.W.SLIDING_5 },
+                    { name: "GOLDEN DAMASCUS", challenge: CHALLENGES.W.THREE_KILLS_SINGLE_MATCH_5 },
+                    { name: "STARGLASS", challenge: CHALLENGES.W.FIVE_KILLS_NO_DYING_5 },
+                    { name: "ABSOLUTE ZERO", challenge: CHALLENGES.W.TOP_10_ELIMS_10 },
+                    { name: "APOCALYPSE", challenge: CHALLENGES.W.UNLOCK_ABSOLUTE_ZERO_30 }
+                ]
+        },
+        "VMP": {
+            campaign: [
+                    { name: "TOPAZ SNAKE", challenge: CHALLENGES.C.CRITICALS_250 },
+                    { name: "CINDER", challenge: CHALLENGES.C.POINT_BLANK_50 },
+                    { name: "CAIMAN", challenge: CHALLENGES.C.RELOAD_10X10 },
+                    { name: "NETWORK", challenge: CHALLENGES.C.GUILDTECH_50 },
+                    { name: "MOTEN GOLD", challenge: CHALLENGES.C.SPECIAL_ENEMIES_20 },
+                    { name: "MOONSTONE", challenge: CHALLENGES.C.ENDGAME_ZONE_III_IV_100 },
+                    { name: "CHROMA FLUX", challenge: CHALLENGES.C.ELITE_ENEMIES_10 },
+                    { name: "GENESIS", challenge: CHALLENGES.C.UNLOCK_CHROMA_FLUX_30 }
+                ],
+            multiplayer: [
+                    { name: "RUBY SNAKE", challenge: CHALLENGES.MP.HEADSHOTS_80 },
+                    { name: "DIAMONDBACK", challenge: CHALLENGES.MP.MOVING_50 },
+                    { name: "RAPTOR", challenge: CHALLENGES.MP.SLIDE_DIVE_WALLJUMP_15 },
+                    { name: "MAINFRAME", challenge: CHALLENGES.MP.HIPFIRE_30 },
+                    { name: "SHATTERED GOLD", challenge: CHALLENGES.MP.THREE_KILLS_NO_DYING_10 },
+                    { name: "ARCLIGHT", challenge: CHALLENGES.MP.DOUBLE_KILLS_10 },
+                    { name: "TEMPEST", challenge: CHALLENGES.MP.FIVE_KILLS_NO_DYING_3 },
+                    { name: "SINGULARITY", challenge: CHALLENGES.MP.UNLOCK_TEMPEST_30 }
+                ],
+            zombies: [
+                    { name: "EMERALD SNAKE", challenge: CHALLENGES.Z.CRITICALS_1000 },
+                    { name: "MUTILATE", challenge: CHALLENGES.Z.POINT_BLANK_300 },
+                    { name: "SLITHER", challenge: CHALLENGES.Z.SINGLE_MATCH_CRITS_300 },
+                    { name: "PATHFINDER", challenge: CHALLENGES.Z.TACTICAL_LASER_30 },
+                    { name: "GOLDEN DRAGON", challenge: CHALLENGES.Z.RAPID_KILLS_10X15 },
+                    { name: "BLOODSTONE", challenge: CHALLENGES.Z.NO_DAMAGE_STREAK_20X5 },
+                    { name: "DOOMSTEEL", challenge: CHALLENGES.Z.ELITE_ZOMBIES_10 },
+                    { name: "INFESTATION", challenge: CHALLENGES.Z.UNLOCK_DOOMSTEEL_30 }
+                ],
+            warzone: [
+                    { name: "SAPPHIRE SNAKE", challenge: CHALLENGES.W.ELIMINATIONS_100 },
+                    { name: "SHIMMER", challenge: CHALLENGES.W.SLIDING_5 },
+                    { name: "TYRANT", challenge: CHALLENGES.W.SPRINT_5 },
+                    { name: "TRACE", challenge: CHALLENGES.W.NO_DAMAGE_5 },
                     { name: "GOLDEN DAMASCUS", challenge: CHALLENGES.W.THREE_KILLS_SINGLE_MATCH_5 },
                     { name: "STARGLASS", challenge: CHALLENGES.W.FIVE_KILLS_NO_DYING_5 },
                     { name: "ABSOLUTE ZERO", challenge: CHALLENGES.W.TOP_10_ELIMS_10 },
@@ -2448,6 +2535,48 @@ const weapons = {
                     { name: "ABSOLUTE ZERO", challenge: CHALLENGES.W.TOP_10_ELIMS_10 },
                     { name: "APOCALYPSE", challenge: CHALLENGES.W.UNLOCK_ABSOLUTE_ZERO_30 }
                 ]
+        },
+        "ROC 20MM": {
+            campaign: [
+                    { name: "TOPAZ SNAKE", challenge: CHALLENGES.C.ELIMINATIONS_250 },
+                    { name: "CINDER", challenge: CHALLENGES.C.ENDGAME_HVTS_15 },
+                    { name: "CAIMAN", challenge: CHALLENGES.C.RARE_100 },
+                    { name: "NETWORK", challenge: CHALLENGES.C.DESTROY_GUILD_EQUIPMENT_25 },
+                    { name: "MOTEN GOLD", challenge: CHALLENGES.C.SPECIAL_ENEMIES_20 },
+                    { name: "MOONSTONE", challenge: CHALLENGES.C.ENDGAME_ZONE_III_IV_100 },
+                    { name: "CHROMA FLUX", challenge: CHALLENGES.C.ELITE_ENEMIES_10 },
+                    { name: "GENESIS", challenge: CHALLENGES.C.UNLOCK_CHROMA_FLUX_30 }
+                ],
+            multiplayer: [
+                    { name: "RUBY SNAKE", challenge: CHALLENGES.MP.KILLS_80 },
+                    { name: "DIAMONDBACK", challenge: CHALLENGES.MP.TACTICAL_OR_SCORESTREAK_30 },
+                    { name: "RAPTOR", challenge: CHALLENGES.MP.OBJECTIVE_30 },
+                    { name: "MAINFRAME", challenge: CHALLENGES.MP.RELOAD_2X10 },
+                    { name: "SHATTERED GOLD", challenge: CHALLENGES.MP.THREE_KILLS_NO_DYING_10 },
+                    { name: "ARCLIGHT", challenge: CHALLENGES.MP.DOUBLE_KILLS_10 },
+                    { name: "TEMPEST", challenge: CHALLENGES.MP.FIVE_KILLS_NO_DYING_3 },
+                    { name: "SINGULARITY", challenge: CHALLENGES.MP.UNLOCK_TEMPEST_30 }
+                ],
+            zombies: [
+                    { name: "EMERALD SNAKE", challenge: CHALLENGES.Z.ELIMINATIONS_1000 },
+                    { name: "MUTILATE", challenge: CHALLENGES.Z.ARMORED_300 },
+                    { name: "SLITHER", challenge: CHALLENGES.Z.CRITS_5X15 },
+                    { name: "PATHFINDER", challenge: CHALLENGES.Z.ARMOR_T2_150 },
+                    { name: "GOLDEN DRAGON", challenge: CHALLENGES.Z.RAPID_KILLS_10X15 },
+                    { name: "BLOODSTONE", challenge: CHALLENGES.Z.NO_DAMAGE_STREAK_20X5 },
+                    { name: "DOOMSTEEL", challenge: CHALLENGES.Z.ELITE_ZOMBIES_10 },
+                    { name: "INFESTATION", challenge: CHALLENGES.Z.UNLOCK_DOOMSTEEL_30 }
+                ],
+            warzone: [
+                    { name: "SAPPHIRE SNAKE", challenge: CHALLENGES.W.ELIMINATIONS_100 },
+                    { name: "SHIMMER", challenge: CHALLENGES.W.ADS_5 },
+                    { name: "TYRANT", challenge: CHALLENGES.W.HEADSHOT_5 },
+                    { name: "TRACE", challenge: CHALLENGES.W.CROUCHED_5 },
+                    { name: "GOLDEN DAMASCUS", challenge: CHALLENGES.W.THREE_KILLS_SINGLE_MATCH_2 },
+                    { name: "STARGLASS", challenge: CHALLENGES.W.FIVE_KILLS_NO_DYING_2 },
+                    { name: "ABSOLUTE ZERO", challenge: CHALLENGES.W.TOP_10_ELIMS_3 },
+                    { name: "APOCALYPSE", challenge: CHALLENGES.W.UNLOCK_ABSOLUTE_ZERO_30 }
+                ]
         }
     },
     "MELEE": {
@@ -2739,6 +2868,48 @@ const weapons = {
                     { name: "SHIMMER", challenge: CHALLENGES.W.MOVING_2 },
                     { name: "TYRANT", challenge: CHALLENGES.W.NO_DAMAGE_ELIMS_2 },
                     { name: "TRACE", challenge: CHALLENGES.W.SPRINT_ELIMS_2 },
+                    { name: "GOLDEN DAMASCUS", challenge: CHALLENGES.W.THREE_KILLS_SINGLE_MATCH_2 },
+                    { name: "STARGLASS", challenge: CHALLENGES.W.FIVE_KILLS_NO_DYING_2 },
+                    { name: "ABSOLUTE ZERO", challenge: CHALLENGES.W.TOP_10_ELIMS_3 },
+                    { name: "APOCALYPSE", challenge: CHALLENGES.W.UNLOCK_ABSOLUTE_ZERO_30 }
+                ]
+        },
+        "ARCBLADE": {
+            campaign: [
+                    { name: "TOPAZ SNAKE", challenge: CHALLENGES.C.CRITICALS_250 },
+                    { name: "CINDER", challenge: CHALLENGES.C.FEAR_100 },
+                    { name: "CAIMAN", challenge: CHALLENGES.C.COMMAND_CENTERS_TOXIN_FIELDS_50 },
+                    { name: "NETWORK", challenge: CHALLENGES.C.SWITCHING_WEAPONS_25 },
+                    { name: "MOTEN GOLD", challenge: CHALLENGES.C.SPECIAL_ENEMIES_20 },
+                    { name: "MOONSTONE", challenge: CHALLENGES.C.ENDGAME_ZONE_III_IV_100 },
+                    { name: "CHROMA FLUX", challenge: CHALLENGES.C.ELITE_ENEMIES_10 },
+                    { name: "GENESIS", challenge: CHALLENGES.C.UNLOCK_CHROMA_FLUX_30 }
+                ],
+            multiplayer: [
+                    { name: "RUBY SNAKE", challenge: CHALLENGES.MP.KILLS_80 },
+                    { name: "DIAMONDBACK", challenge: CHALLENGES.MP.NO_DAMAGE_30 },
+                    { name: "RAPTOR", challenge: CHALLENGES.MP.HEAVY_MELEE_10 },
+                    { name: "MAINFRAME", challenge: CHALLENGES.MP.OBJECTIVE_30 },
+                    { name: "SHATTERED GOLD", challenge: CHALLENGES.MP.THREE_KILLS_NO_DYING_10 },
+                    { name: "ARCLIGHT", challenge: CHALLENGES.MP.DOUBLE_KILLS_10 },
+                    { name: "TEMPEST", challenge: CHALLENGES.MP.FIVE_KILLS_NO_DYING_3 },
+                    { name: "SINGULARITY", challenge: CHALLENGES.MP.UNLOCK_TEMPEST_30 }
+                ],
+            zombies: [
+                    { name: "EMERALD SNAKE", challenge: CHALLENGES.Z.ELIMINATIONS_1000 },
+                    { name: "MUTILATE", challenge: CHALLENGES.Z.ARMORED_75 },
+                    { name: "SLITHER", challenge: CHALLENGES.Z.NO_DAMAGE_10X3 },
+                    { name: "PATHFINDER", challenge: CHALLENGES.Z.DISTRACTED_10X20 },
+                    { name: "GOLDEN DRAGON", challenge: CHALLENGES.Z.RAPID_KILLS_10X15 },
+                    { name: "BLOODSTONE", challenge: CHALLENGES.Z.NO_DAMAGE_STREAK_20X5 },
+                    { name: "DOOMSTEEL", challenge: CHALLENGES.Z.ELITE_ZOMBIES_10 },
+                    { name: "INFESTATION", challenge: CHALLENGES.Z.UNLOCK_DOOMSTEEL_30 }
+                ],
+            warzone: [
+                    { name: "SAPPHIRE SNAKE", challenge: CHALLENGES.W.ELIMINATIONS_100 },
+                    { name: "SHIMMER", challenge: CHALLENGES.W.SPRINT_ELIMS_2 },
+                    { name: "TYRANT", challenge: CHALLENGES.W.MOVING_2 },
+                    { name: "TRACE", challenge: CHALLENGES.W.KILLSTREAK_ACTIVE_2 },
                     { name: "GOLDEN DAMASCUS", challenge: CHALLENGES.W.THREE_KILLS_SINGLE_MATCH_2 },
                     { name: "STARGLASS", challenge: CHALLENGES.W.FIVE_KILLS_NO_DYING_2 },
                     { name: "ABSOLUTE ZERO", challenge: CHALLENGES.W.TOP_10_ELIMS_3 },
