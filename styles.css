@@ -1,0 +1,394 @@
+/* ===== APP HEADER ===== */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background: #111111;
+    border-bottom: 2px solid #333333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.app-title {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #ff6a00;
+}
+
+/* Subtle reset button in header */
+.reset-button {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    background: #1a1a1a;
+    color: #888888;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.reset-button:hover {
+    opacity: 1;
+    color: #ff6a00;
+    border-color: #ff6a00;
+    background-color: #181818;
+}
+
+/* Make the stats tab float to the right of the mode tabs */
+.toggle-button.secondary-toggle {
+    margin-left: auto;
+}
+
+/* ===== STATS VIEW ===== */
+.stats-section {
+    margin-top: 16px;
+}
+
+.stats-section h3 {
+    margin: 16px 0 6px 0;
+    font-size: 1.1em;
+    color: #ffae00;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.stats-section p {
+    margin: 0 0 4px 0;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    font-size: 0.95em;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #333333;
+}
+
+.stats-table th {
+    text-align: left;
+    background-color: #262626;
+    color: #ffae00;
+    font-weight: 700;
+}
+
+.stats-table tr:nth-child(even) {
+    background-color: #1b1b1b;
+}
+
+.stats-table tr:hover {
+    background-color: #2b2b2b;
+}
+
+.stats-section-row td {
+    padding-top: 12px;
+    font-weight: 700;
+    color: #ff6a00;
+    background-color: #181818;
+    border-top: 2px solid #333333;
+}
+
+/* Optional: overall progress line in stats view */
+.overall-progress {
+    margin-top: 12px;
+    font-weight: 700;
+    color: #ffae00;
+}
+
+
+/* Overall container styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0d0d0d;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #e0e0e0;
+}
+
+/* Wrapper for left and right panels */
+#gunListContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tabs for modes */
+.tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 20px 0;
+}
+
+/* Toggle button styles */
+.toggle-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f2f2f2;
+    background: #262626;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-button.active {
+    background: #ff6a00;
+    color: #000000;
+    border-color: #ff6a00;
+    box-shadow: 0 0 12px rgba(255, 106, 0, 0.9);
+}
+
+.toggle-button:hover {
+    border-color: #ff6a00;
+    box-shadow: 0 0 10px rgba(255, 106, 0, 0.7);
+    transform: translateY(-1px);
+}
+
+.toggle-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* LEFT PANEL – gun types and guns */
+.left-panel {
+    width: 280px;
+    max-width: 320px;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    border: 2px solid #333333;
+    box-shadow: 0 0 12px #000000;
+}
+
+/* Gun type collapsible panels */
+.gun-type-panel {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #222222;
+    border: 2px solid #333333;
+}
+
+.gun-type-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    font-size: 1em;
+    font-weight: 700;
+    color: #ff6a00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #181818;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Gun type header milestones */
+.gun-type-summary.gun-type-progress-5 {
+    background: #4a3a16;
+    color: #ffe7a3;
+    border-bottom: 2px solid #d4af37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.gun-type-summary.gun-type-progress-6 {
+    background: #3a3f47;
+    color: #f4f7ff;
+    border-bottom: 2px solid #c0c0c0;
+    box-shadow: 0 0 10px rgba(192, 192, 192, 0.7);
+}
+
+.gun-type-summary.gun-type-progress-7 {
+    background: #301b4a;
+    color: #f0e0ff;
+    border-bottom: 2px solid #8a2be2;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+}
+
+.gun-type-summary.checked-off {
+    background-color: #009900;
+    color: #ffffff;
+    border-bottom: 2px solid #003300;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+/* Remove default triangle styling if desired */
+/* details > summary::-webkit-details-marker {
+    display: none;
+} */
+
+.gun-list {
+    list-style-type: none;
+    padding: 8px;
+    margin: 0;
+}
+
+/* Each gun item in the left list */
+.gun-list-item {
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    background-color: #2b2b2b;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-align: left;
+    color: #dcdcdc;
+    border: 1px solid #444444;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.gun-list-item:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    color: #ff6a00;
+    border-color: #ff6a00;
+}
+
+/* Selected gun highlight */
+.gun-list-item.selected {
+    background-color: #ff6a00;
+    color: #000000;
+    box-shadow: 0 0 12px rgba(255, 106, 0, 0.8);
+    border: 2px solid #ff6a00;
+}
+
+/* Gun fully completed (all camos) */
+.gun-list-item.checked-off {
+    background-color: #009900;
+    color: #ffffff;
+    border: 2px solid #003300;
+}
+
+/* Gun progress milestones (5–7 camos in order) */
+.gun-list-item.gun-progress-5 {
+    background: #4a3a16;
+    color: #ffe7a3;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+.gun-list-item.gun-progress-6 {
+    background: #3a3f47;
+    color: #f4f7ff;
+    border: 2px solid #c0c0c0;
+    box-shadow: 0 0 10px rgba(192, 192, 192, 0.8);
+}
+
+.gun-list-item.gun-progress-7 {
+    background: #301b4a;
+    color: #f0e0ff;
+    border: 2px solid #8a2be2;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8);
+}
+
+/* RIGHT PANEL – camo display for selected gun */
+.right-panel {
+    flex: 1;
+    min-height: 300px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    border: 3px solid #333333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header for selected gun */
+.right-panel-header h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.right-panel-header p {
+    margin: 0 0 15px 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ff6a00;
+}
+
+/* Placeholder text when no gun is selected */
+.placeholder-text {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #cccccc;
+}
+
+/* Camo list layout */
+.camo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 10px;
+}
+
+/* Single camo row */
+.camo-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Checkbox style (reuses your square check styling) */
+.camo-row input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid #666666;
+    position: relative;
+    cursor: pointer;
+    background-color: #1f1f1f;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.camo-row input[type="checkbox"]:checked {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(255, 106, 0, 0.8);
+}
+
+/* Camo label */
+.camo-row label {
+    font-size: 1.1em;
+    color: #e6e6e6;
+    cursor: pointer;
+}
+
+/* Progress text under the camo list */
+.progress-text {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1em;
+    color: #ff6a00;
+}
+
+/* Optional camo challenge text under label */
+.camo-challenge {
+    margin: 2px 0 0 0;
+    font-size: 0.9em;
+    color: #bbbbbb;
+}
