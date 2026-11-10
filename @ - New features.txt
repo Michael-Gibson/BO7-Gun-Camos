@@ -1,0 +1,10 @@
+New features include:
+
+- Reset button in top right with a prompt when clicked so there are no accidental clicks.
+
+- When you click on the gold or 5th checkbox, the gun itself highlights gold. This same
+  thing happens when you progress and the colors will differentiate your progress so you see 
+  a visual difference.
+
+- When all guns underneath a gun type are gold or anything after gold then the gun type will
+  match the color as far as you have gotten on your camo grind.
